@@ -1,0 +1,5 @@
+path: /content/drive/MyDrive/IT5005_Milestone2/
+train: training_night/images/train
+val: training_night/images/val
+nc: 1
+names: ['car']
