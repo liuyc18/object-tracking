@@ -3,3 +3,13 @@
 *predict*/
 params-ft-bytetrack/
 trail/
+
+# tex files
+*.dvi
+*.aux
+*.log
+*.out
+*.gz
+*.toc
+*.snm
+*.nav
