@@ -11,11 +11,11 @@
 \usepackage{setspace}
 \usepackage{nopageno}
 
-% \spaceskip=0pt
-% \setlength{\parskip}{0pt}
-% \titlespacing*{\section}{0pt}{04\baselineskip}{0.4\baselineskip}
-% \titlespacing*{\subsection}{0pt}{0.3\baselineskip}{0.3\baselineskip}
-% \titlespacing*{\paragraph}{0pt}{0.16\baselineskip}{0.5\baselineskip}
+\spaceskip=0pt
+\setlength{\parskip}{0pt}
+\titlespacing*{\section}{0pt}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.6\baselineskip}{0.6\baselineskip}
+\titlespacing*{\paragraph}{0pt}{0.4\baselineskip}{0.4\baselineskip}
 
 
 \begin{document}
@@ -64,15 +64,14 @@
 Object detection evolved from traditional methods to deep learning approaches, with \textbf{YOLO (You Only Look Once)} addressing speed limitations by reformulating detection as a single regression problem. YOLO achieves real-time performance while maintaining competitive accuracy by predicting bounding boxes and classes in one evaluation. When combined with tracking algorithms like \textbf{ByteTrack}, YOLO enables real-time multi-object tracking across video frames, serving applications from autonomous vehicles to surveillance systems. This combination provides temporal consistency while reducing computation, making it ideal for time-sensitive applications (Terven et al., 2023).
 
 \section{The Evolution of YOLO Architectures}
-
 \subsection{Early Development: YOLOv1-v3}
 YOLOv1 (Redmon et al., 2016) pioneered the end-to-end approach with grid-based prediction but struggled with small objects. YOLOv2 added anchor boxes and Darknet-19 with batch normalization (Redmon \& Farhadi, 2017), while YOLOv3 incorporated Darknet-53 with residual connections for improved multi-scale detection (Redmon \& Farhadi, 2018).
 
-\subsection{Modern Architecture: YOLOv4-v5}
-YOLOv4 established the backbone-neck-head structure with CSPDarknet53 and PANet (Bochkovskiy et al., 2020). YOLOv5 reimplemented these concepts in PyTorch with SPPF and AutoAnchor, offering various model sizes for flexible deployment (Ultralytics, 2020).
+\subsection{Middle Generation: YOLOv4-v8}
+YOLOv4 established the backbone-neck-head structure with CSPDarknet53 and PANet (Bochkovskiy et al., 2020). YOLOv5 reimplemented these concepts in PyTorch with SPPF and AutoAnchor, offering various model sizes for flexible deployment (Ultralytics, 2020). YOLOv6 introduced EfficientRep backbone and decoupled detection heads (Li et al., 2022). YOLOv7 featured E-ELAN modules for optimized feature transfer and improved RepConv (Wang et al., 2022). YOLOv8, as shown in Fig 1, implements the lighter C2f module instead of CSP blocks and adopts an anchor-free architecture with fully decoupled heads for classification, regression, and confidence estimation (Jocher et al., 2023).
 
-\subsection{Recent Innovations: YOLOv6-v8}
-YOLOv6 introduced EfficientRep backbone and decoupled detection heads (Li et al., 2022). YOLOv7 featured E-ELAN modules for optimized feature transfer and improved RepConv (Wang et al., 2022). YOLOv8, the latest version, as shown in Fig 1, implements the lighter C2f module instead of CSP blocks and adopts an anchor-free architecture with fully decoupled heads for classification, regression, and confidence estimation (Jocher et al., 2023).
+\subsection{State-of-the-Art: YOLOv9-v12}
+YOLOv9 enhanced efficiency through Programmable Gradient Information (PGI) and Generalized Efficient Layer Aggregation Network (GELAN) architecture, reducing computational redundancy (Wang et al., 2024). YOLOv10 introduced Redistribution of Intermediary Redundancy (RIR) optimization and enhanced ELAN blocks for improved feature extraction (Ge et al., 2024). YOLOv11 incorporated attention mechanisms with spatial-channel mixing and dynamic convolutions for adaptive feature learning (Jiang et al., 2024). Most recently, YOLOv12 has pushed performance boundaries with hybrid transformer-CNN architecture, advanced distillation techniques, and specialized modules for handling extreme scales and occlusions, achieving state-of-the-art results across multiple benchmarks while maintaining real-time performance (Li et al., 2024).
 
 \section{Architectural Components and Innovations}
 
