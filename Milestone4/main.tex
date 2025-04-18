@@ -86,7 +86,7 @@ The improved R-ELAN structure enhances gradient flow through residual connection
 \begin{equation}
 R\text{-}ELAN(X) = X + \sum_{i=1}^n Conv_{3×3}(Attn(Conv_{1×1}(X)))
 \end{equation}
-This maintains 92% of baseline accuracy while reducing parameters by 40% compared to standard ELAN.
+This maintains 92\% of baseline accuracy while reducing parameters by 40\% compared to standard ELAN.
 \subsection{Dynamic Architecture Configuration}
 YOLOv12 adapts its architecture based on input complexity through:
 \begin{equation}
@@ -207,18 +207,18 @@ Where $x_t$ represents the state vector (position and velocity), $F$ is the stat
 \subsection{ByteTrack Workflow and Advantages}
 \begin{enumerate}
 \item \textbf{Dual-Threshold Detection Association} (76.3 MOTA): Implements confidence-based detection grouping with high/low thresholds for staged trajectory matching
-\item \textbf{Dynamic State Estimation}: Utilizes Kalman filtering for cross-frame prediction, reducing trajectory fragmentation by 32%
+\item \textbf{Dynamic State Estimation}: Utilizes Kalman filtering for cross-frame prediction, reducing trajectory fragmentation by 32\%
 \item \textbf{Robust Track Management}: Employs two-stage matching (high→low confidence) to achieve:
 \begin{itemize}
-\item Low-confidence detection reuse: Improves recall by 12.6%
-\item Reduced ID switches: Maintains <2.1% IDSR in crowded scenarios
+\item Low-confidence detection reuse: Improves recall by 12.6\%
+\item Reduced ID switches: Maintains <2.1\% IDSR in crowded scenarios
 \end{itemize}
 \end{enumerate}
 Key technical features:
 \begin{itemize}
 \item Computational efficiency: 62 FPS on Tesla V100
 \item Architecture-agnostic design: Compatible with YOLO variants (v5-v12)
-\item Occlusion resilience: 89% track survival rate under 3s occlusion
+\item Occlusion resilience: 89\% track survival rate under 3s occlusion
 \end{itemize}
 This optimized implementation achieves state-of-the-art tracking performance while maintaining real-time processing capabilities.
 
